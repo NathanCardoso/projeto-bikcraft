@@ -3,6 +3,10 @@ body {
   font-size: $base-font-size;
 }
 
+a {
+  text-decoration: none;
+}
+
 #app {
   position: relative;
   overflow: hidden;

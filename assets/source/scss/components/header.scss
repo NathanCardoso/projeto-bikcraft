@@ -1,3 +1,84 @@
-#header {
-  
+.header {
+  background: map-get($color, black);
+
+  .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: rem(20);
+      padding: rem(20);
+      box-sizing: border-box;
+      
+      /*Responsivo*/
+      @include screen ($mobile-only) {
+          margin-right: rem(28);
+      }
+
+      nav {
+          .header-menu {
+              display: flex;
+              flex-wrap: wrap;
+              gap: rem(40);
+              
+              /*RESPONSIVO*/
+              @include display($tablet-portrait-down) {
+                  gap: rem(20);
+              }
+
+              @include screen ($mobile-only) {
+                  gap: rem(12);
+              }
+
+              li {
+                  a {
+                      display: inline-block;
+                      padding: rem(16) 0;
+                      color: map-get($color, white);
+                      font-size: rem(18);
+                      border-radius: rem(4);
+                      position: relative;
+                      
+                      /*RESPONSIVO*/
+                      @include display($tablet-portrait-down) {
+                        background: map-get($color, black-1);
+                        padding: rem(12) rem(16);
+                      }
+
+                      @include screen($mobile-only) {
+                          padding: rem(8) rem(12);
+                          font-size: rem(14);
+                      }
+                  }
+
+                  a::after {
+                      content: ""; 
+                      display: block;
+                      width: 0;
+                      height: rem(2);
+                      margin-top: rem(4);
+                      background: map-get($color, white);
+                      transition: 0.3s;
+                      position: absolute;
+                    }
+
+                  a:hover::after {
+                    width: 100%;
+
+                    @include display($tablet-portrait-down) {
+                        display: none;
+                    }
+                  }
+
+                  a:hover {
+
+                      /*RESPONSIVO*/
+                    @include display($tablet-portrait-down) {
+                        background: map-get($color, black-2);
+                    }
+                  }
+              }
+          }
+      }
+  }
 }
