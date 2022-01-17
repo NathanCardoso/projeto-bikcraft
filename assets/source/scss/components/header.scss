@@ -7,8 +7,8 @@
       align-items: center;
       flex-wrap: wrap;
       gap: rem(20);
-      padding: rem(20);
-      box-sizing: border-box;
+      padding-top: rem(20);
+      padding-bottom: rem(20);
       
       /*Responsivo*/
       @include screen ($mobile-only) {
@@ -65,6 +65,7 @@
                   a:hover::after {
                     width: 100%;
 
+                    /*RESPONSIVO*/
                     @include display($tablet-portrait-down) {
                         display: none;
                     }
@@ -72,7 +73,7 @@
 
                   a:hover {
 
-                      /*RESPONSIVO*/
+                    /*RESPONSIVO*/
                     @include display($tablet-portrait-down) {
                         background: map-get($color, black-2);
                     }

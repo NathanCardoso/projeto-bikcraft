@@ -1,1 +1,19 @@
-.button {  }
+.button { 
+    padding: rem(16) rem(32);
+    background: linear-gradient(map-get($color, yellow-1), map-get($color, yellow-2));
+    border-radius: rem(4);
+    box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.1);
+    border: none;
+    text-transform: uppercase;
+
+    a {
+        color: map-get($color, yellow-5);  
+        font-size: rem(18);
+        line-height: 1.33;
+        font-weight: bold;      
+    }
+}
+
+.button:hover {
+    background: linear-gradient(map-get($color, yellow-3), map-get($color, yellow-4));
+}

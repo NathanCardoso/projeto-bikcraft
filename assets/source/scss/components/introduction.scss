@@ -1,0 +1,42 @@
+.introduction {
+    background: map-get($color, black);
+    box-shadow: inset 0 rem(-120) #fff;
+
+    .introduction-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: rem(40);
+        
+        .content-introduction {
+            align-self: end;
+            padding-bottom: rem(200);
+
+            .title-introduction {
+                margin-bottom: rem(32);
+                font-size: rem(64);
+                font-weight: bold;
+                line-height: 1.125;
+                color: map-get($color, white);
+
+                span {
+                    color: map-get($color, yellow);
+                }
+            }
+
+            .paragraph-introduction {
+                margin-bottom: rem(20);
+                font-size: rem(24);
+                line-height: 1.5;
+                color: map-get($color, gray);
+            }
+        }
+
+        .photo-introduction {
+            margin-bottom: rem(-120);
+            img {
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
