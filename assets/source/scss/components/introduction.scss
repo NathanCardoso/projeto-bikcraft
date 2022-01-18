@@ -30,8 +30,9 @@
 
             .title-introduction {
                 margin-bottom: rem(32);
+                font-family: $poppins-semibold;
                 font-size: rem(64);
-                font-weight: bold;
+                font-weight: 600;
                 line-height: 1.125;
                 color: map-get($color, white);
 
@@ -52,6 +53,7 @@
 
             .paragraph-introduction {
                 margin-bottom: rem(20);
+                font-family: $roboto-regular;
                 font-size: rem(24);
                 line-height: 1.5;
                 color: map-get($color, gray);
@@ -63,14 +65,16 @@
              }
 
              button {
-
+                 font-family: $poppins-semibold;
+                 
                  /*RESPONSIVO*/
-                @include display($tablet-portrait-down) {
-                    padding: rem(12) rem(16);
-                }
-
-                 a {
-
+                 @include display($tablet-portrait-down) {
+                     padding: rem(12) rem(16);
+                    }
+                    
+                    a {
+                        font-weight: 600;
+                        
                     /*RESPONSIVO*/
                     @include display($tablet-portrait-down) {
                         font-size: rem(16);
