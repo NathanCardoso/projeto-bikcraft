@@ -23,6 +23,7 @@
             align-self: end;
             padding-bottom: rem(200);
 
+            /*RESPONSIVO*/
             @include display ($tablet-portrait-down) {
                 padding-bottom: rem(0);
             }
@@ -80,7 +81,7 @@
 
         .photo-introduction {
             margin-bottom: rem(-120);
-            
+
             img {
                 height: 100%;
                 object-fit: cover;
