@@ -29,11 +29,7 @@
             }
 
             .title-introduction {
-                margin-bottom: rem(32);
-                font-family: $poppins-semibold;
-                font-size: rem(64);
-                font-weight: 600;
-                line-height: 1.125;
+                @include font-title;
                 color: map-get($color, white);
 
                 span {
