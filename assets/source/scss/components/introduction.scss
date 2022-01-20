@@ -15,10 +15,6 @@
                 .title-introduction {
                     @include font-1-xxl;
                     color: map-get($color, white);
-    
-                    span {
-                        color: map-get($color, yellow);
-                    }
                 }
     
                 .paragraph-introduction {
@@ -39,8 +35,6 @@
             }
     
             .photo-introduction {
-                margin-bottom: rem(-120);
-    
                 img {
                     height: 100%;
                     object-fit: cover;

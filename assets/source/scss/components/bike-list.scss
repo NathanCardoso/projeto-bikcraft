@@ -1,0 +1,108 @@
+.bike-list {
+    padding: rem(60) 0 rem(120) 0;
+
+    .container {
+        max-width: rem(1400);
+        
+        .wrap {
+            .title-bike {
+                font-size: rem(64);
+                line-height: 1.125;
+                font-family: $poppins-semibold;
+                font-weight: 600;
+                box-sizing: border-box;
+                max-width: rem(1200);
+                margin: 0 auto rem(40);
+                padding: 0 rem(24) 0 rem(24);
+            }
+
+            .card-bike {
+                display: flex;
+                gap: rem(40);
+                overflow-x: auto;
+                padding: 0 rem(20) rem(20) rem(20);
+
+                li {
+                    flex: 1;
+                    min-width: rem(280);
+
+                    a {
+                        display: block;
+
+                        .photo-bike {
+                            margin-bottom: rem(16);
+                        }
+
+                        .caption-bike {
+                            font-size: rem(32);
+                            line-height: 1.25;
+                            font-family: $poppins-semibold;
+                            font-weight: 600;
+                            color: black;
+                            margin-bottom: rem(8);
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .caption-bike::before {
+                            content: "";
+                            height: rem(8);
+                            width: rem(12);
+                            margin-right: rem(8);
+                            display: inline-block;
+                            background: map-get($color, yellow);
+                            transition: width 0.2s;
+                        }
+    
+                        .price-bike {
+                            padding-left: rem(20);
+                            font-size: rem(18);
+                            line-height: 1.35;
+                            font-family: $roboto-regular;
+                            font-weight: 500;
+                            color: map-get($color, gray-1);
+                        }
+                    }
+
+                    a:hover {
+                        .caption-bike::before {
+                            width: rem(24);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*RESPONSIVO*/
+@media screen and (max-width: $tablet-landscape-down) {
+    .bike-list {
+        .container {
+            .wrap {
+                .title-bike {
+                    font-size: rem(48);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-portrait-down) {
+    .bike-list {
+        padding-bottom: rem(60);
+        
+        .container {
+            .wrap {
+                .title-bike {
+                    font-size: rem(36);
+                }
+
+                .card-bike {
+                    gap: rem(20);
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
