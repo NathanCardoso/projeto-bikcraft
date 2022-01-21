@@ -45,6 +45,24 @@
 }
 
 /*RESPONSIVO*/
+@media screen and (max-width: $tablet-landscape-down) {
+    .introduction {
+        .container {
+            .wrap {
+                .content-introduction {
+                    .title-introduction {
+                        font-size: rem(48);
+                    }
+
+                    .paragraph-introduction {
+                        font-size: rem(18);
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: $tablet-portrait-down) {
     .introduction {
         background: map-get($color, black-1);
@@ -77,24 +95,6 @@
                     img {
                         height: rem(300);
                         width: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: $tablet-landscape-down) {
-    .introduction {
-        .container {
-            .wrap {
-                .content-introduction {
-                    .title-introduction {
-                        font-size: rem(48);
-                    }
-
-                    .paragraph-introduction {
-                        font-size: rem(18);
                     }
                 }
             }

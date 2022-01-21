@@ -1,0 +1,21 @@
+.link {
+    display: inline-block;
+    color: map-get($color, yellow-1);
+    font-family: $poppins-regular;
+    font-size: rme(24);
+    line-height: 1.5;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: rem(4);
+    background-color: currentColor;
+}
+
+.link:hover {
+    color: white;
+}

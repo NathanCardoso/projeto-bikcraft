@@ -1,5 +1,6 @@
 .technology {
     background: map-get($color , black-1);
+    box-shadow: inset 0 rem(80) white, inset 0 rem(-80) white;
 
     .container{
         .wrap {
@@ -8,6 +9,8 @@
             gap: rem(40);
 
             .content-technology {
+                padding: rem(160) 0;
+
                 .advanced-technology {
                     font-size: rem(24);
                     line-height: 1.5;
@@ -16,6 +19,7 @@
                     letter-spacing: 0.015em;
                     text-transform: uppercase;
                     color: map-get($color, gray);
+                    margin-bottom: rem(20);
                 }
 
                 .title-technology {
@@ -24,6 +28,7 @@
                     font-family: $poppins-semibold;
                     font-weight: 600;
                     color: white;
+                    margin-bottom: rem(32);
                 }
 
                 .paragraph-technology {
@@ -32,15 +37,25 @@
                     font-family: $roboto-regular;
                     font-weight: 400;
                     color: map-get($color, gray);
+                    margin-bottom: rem(20);
+                }
+
+                .button {
+                    margin-bottom: rem(80);
                 }
 
                 .specifications-technology {
+                    display: flex;
+                    gap: rem(40);
+
                     .title-specifications-technology {
                         font-size: rem(18);
                         line-height: 1.35;
                         font-family: $poppins-regular;
                         font-weight: 400;
                         color: white;
+                        margin-bottom: rem(8);
+                        width: max-content;
                     }
 
                     .paragraph-specifications-technology {
@@ -50,13 +65,86 @@
                         font-weight: 400;
                         color: map-get($color, gray);
                     }
+
+                    .icon-specifications-technology {
+                        img {
+                            width: rem(24);
+                        }
+                    }
                 }
             }
 
             .photo-technology {
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}
+
+/*RESPONSIVO*/
+@media screen and (max-width: $tablet-landscape-down) {
+    .technology {
+        .container {
+            .wrap {
+                .content-technology {
+                    .advanced-technology {
+                        font-size: rem(18);
+                    }
+                    
+                    .title-technology {
+                        font-size: rem(48);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-portrait-down) {
+    .technology {
+        box-shadow: initials;
+
+        .container {
+            .wrap {
+                grid-template-columns: 1fr;
+
+                .content-technology {
+                    padding: none;
+
+                    .title-technology {
+                        font-size: rem(32);
+                    }
+
+                    .paragraph-technology {
+                        font-size: rem(18);
+                    }
+
+                    .button {
+                        margin-bottom: rem(60);
+                    }
+                }
+
+                .photo-technology {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-only) {
+    .technology {
+        .container {
+            .wrap {
+                .content-technology {
+                    .specifications-technology {
+                        flex-direction: column;
+                    }
+                }
             }
         }
     }
