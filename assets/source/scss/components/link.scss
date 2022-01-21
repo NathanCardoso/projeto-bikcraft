@@ -1,21 +1,30 @@
 .link {
-    display: inline-block;
-    color: map-get($color, yellow-1);
-    font-family: $poppins-regular;
-    font-size: rme(24);
-    line-height: 1.5;
-    font-weight: 500;
-    text-transform: uppercase;
+    border: none;
+    margin-bottom: rem(80);
+    a{
+        display: inline-block;
+        color: map-get($color, yellow-1);
+        font-family: $poppins-regular;
+        font-size: rem(24);
+        line-height: 1.5;
+        font-weight: 500;
+        text-transform: uppercase;
+        background: map-get($color, black-1);
+    }
 }
 
-.link::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: rem(4);
-    background-color: currentColor;
+.link {
+    a:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: rem(4);
+        background-color: currentColor;
+    }
 }
 
-.link:hover {
-    color: white;
+.link {
+    a:hover {
+        color: white;
+    }
 }
