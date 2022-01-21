@@ -107,14 +107,14 @@
 
 @media screen and (max-width: $tablet-portrait-down) {
     .technology {
-        box-shadow: initials;
+        box-shadow: initial;
 
         .container {
             .wrap {
                 grid-template-columns: 1fr;
 
                 .content-technology {
-                    padding: none;
+                    padding: rem(60) 0;
 
                     .title-technology {
                         font-size: rem(32);
