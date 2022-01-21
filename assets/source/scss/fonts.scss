@@ -62,3 +62,16 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('#{$font-path}subset-Merriweather-BlackItalic.eot');
+  src: url('#{$font-path}subset-Merriweather-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('#{$font-path}subset-Merriweather-BlackItalic.woff2') format('woff2'),
+      url('#{$font-path}subset-Merriweather-BlackItalic.woff') format('woff'),
+      url('#{$font-path}subset-Merriweather-BlackItalic.ttf') format('truetype'),
+      url('#{$font-path}subset-Merriweather-BlackItalic.svg#FontName') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
