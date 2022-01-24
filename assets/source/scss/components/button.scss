@@ -18,3 +18,25 @@
 .button:hover {
     background: linear-gradient(map-get($color, yellow-3), map-get($color, yellow-4));
 }
+
+/*BUTTON-SECONDARY*/
+.button-secondary { 
+    padding: rem(16) rem(32);
+    background: map-get($color, black-2);
+    border-radius: rem(4);
+    box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.1);
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    
+    a {
+        color: map-get($color, white-1);  
+        font-size: rem(18);
+        line-height: 1.33;
+        font-weight: bold;      
+    }
+}
+
+.button:hover {
+    background: linear-gradient(map-get($color, yellow-3), map-get($color, yellow-4));
+}
