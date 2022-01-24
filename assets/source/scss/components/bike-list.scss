@@ -73,11 +73,9 @@
             }
         }
     }
-}
 
-/*RESPONSIVO*/
-@media screen and (max-width: $tablet-landscape-down) {
-    .bike-list {
+    /*RESPONSIVO | <= 1023px*/
+    @media screen and (max-width: $tablet-landscape-down) {
         .container {
             .wrap {
                 .title-bike {
@@ -86,10 +84,9 @@
             }
         }
     }
-}
-
-@media screen and (max-width: $tablet-portrait-down) {
-    .bike-list {
+    
+    /*RESPONSIVO | <= 768px*/
+    @media screen and (max-width: $tablet-portrait-down) {
         padding-bottom: rem(60);
         
         .container {
@@ -97,7 +94,7 @@
                 .title-bike {
                     font-size: rem(32);
                 }
-
+    
                 .card-bike {
                     gap: rem(20);
                     padding: 0;

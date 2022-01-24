@@ -25,10 +25,10 @@
                     color: map-get($color, gray);
                  }
     
-                 button {
+                 .button-introduction {
                      font-family: $poppins-semibold;
                         
-                    a {
+                    .button {
                         font-weight: 600;  
                     }
                 }
@@ -42,18 +42,16 @@
             }
         }
     }
-}
 
-/*RESPONSIVO*/
-@media screen and (max-width: $tablet-landscape-down) {
-    .introduction {
+    /*RESPONSIVO | <= 1023px*/
+    @media screen and (max-width: $tablet-landscape-down) {
         .container {
             .wrap {
                 .content-introduction {
                     .title-introduction {
                         font-size: rem(48);
                     }
-
+    
                     .paragraph-introduction {
                         font-size: rem(18);
                     }
@@ -61,36 +59,35 @@
             }
         }
     }
-}
 
-@media screen and (max-width: $tablet-portrait-down) {
-    .introduction {
+    /*RESPONSIVO | <= 767px*/
+    @media screen and (max-width: $tablet-portrait-down) {
         background: map-get($color, black-1);
         padding-top: rem(40);
         box-shadow: inset 0 rem(-60) map-get($color, white);
-
+    
         .container {
             .wrap {
                 grid-template-columns: 1fr;
                 gap: rem(32);
-
+    
                 .content-introduction {
                     padding-bottom: rem(0);
-
+    
                     .title-introduction {
                         font-size: rem(32);
                         margin-bottom: rem(16);
                     }
-
+    
                     button {
                         padding: rem(12) rem(16);
-
+    
                         a {
                             font-size: rem(16);
                         }
                     }
                 }
-
+    
                 .photo-introduction {
                     img {
                         height: rem(300);
@@ -101,3 +98,4 @@
         }
     }
 }
+

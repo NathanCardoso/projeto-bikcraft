@@ -1,8 +1,9 @@
 .header {
   background: map-get($color, black);
-
-    .container {
-
+//   width: 100%;
+//   position: fixed;
+  
+  .container {
         .wrap {
           display: flex;
           justify-content: space-between;
@@ -28,49 +29,58 @@
                           border-radius: rem(4);
                           position: relative;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    /*RESPONSIVO | >= 768px*/
+    @media screen and (min-width: $tablet-portrait-up) {
+        .container {
+            .wrap {
+                nav {
+                    .header-menu {
+                        li {
+                            a {
+                                &::after {
+                                    content: ""; 
+                                    display: block;
+                                    width: 0;
+                                    height: rem(2);
+                                    margin-top: rem(4);
+                                    background: map-get($color, white);
+                                    transition: 0.3s;
+                                    position: absolute;
+                                }
     
-                        a::after {
-                          content: ""; 
-                          display: block;
-                          width: 0;
-                          height: rem(2);
-                          margin-top: rem(4);
-                          background: map-get($color, white);
-                          transition: 0.3s;
-                          position: absolute;
-                        }
-    
-                        a:hover::after {
-                            width: 100%;
+                                &:hover::after {
+                                    width: 100%;
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
-}
 
-/*RESPONSIVO*/
-@media screen and (max-width: $tablet-portrait-down) {
-    .header {
+    /*RESPONSIVO | <= 767px*/
+    @media screen and (max-width: $tablet-portrait-down) {
         .container {
             .wrap {
                 nav {
                     .header-menu {
                         gap: rem(20);
-
+                        
                         li {
                             a {
                                 background: map-get($color, black-1);
                                 padding: rem(12) rem(16);
-                            }
-
-                            a:hover:after {
-                                display: none;
-                            }
-
-                            a:hover {
-                                background: map-get($color, black-2);
+                                
+                                &:hover {
+                                    background: map-get($color, black-2);
+                                }
                             }
                         }
                     }
@@ -78,10 +88,9 @@
             }
         }
     }
-}
 
-@media screen and (max-width: $mobile-only) {
-    .header {
+    /*RESPONSIVO | <= 479px*/
+    @media screen and (max-width: $mobile-only) {
         .container {
             .wrap {
                 margin-right: rem(28);
@@ -102,3 +111,4 @@
         }
     }
 }
+

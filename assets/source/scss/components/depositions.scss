@@ -1,5 +1,6 @@
 .depositions {
     background: map-get($color, yellow);
+
     .wrap {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -12,10 +13,12 @@
                 border-radius: 0px;
             }
         }
+        
         .content-depositions {
             padding: rem(40) rem(40) rem(80) rem(80);
             margin: 0 auto;
             align-self: end;
+            overflow: hidden;
 
             .paragraph-depositions {
                 max-width: 32ch;
@@ -25,15 +28,27 @@
                 font-weight: 900;
                 color: map-get($color, yellow-5);
                 margin-bottom: rem(32);
-                position: relative;
-            }
 
-            .paragraph-depositions::before {
-                content: '“';
-                font-size: rem(80);
-                color: map-get($color, yellow-7);
-                position: absolute;
+                p {
+                    position: relative;
+                }
 
+                p::before {
+                    content: '“';
+                    font-size: rem(80);
+                    color: map-get($color, yellow-7);
+                    position: absolute;
+                    left: rem(-50);
+                    top: rem(-20);
+                }
+
+                p::after {
+                    content: '”';
+                    font-size: rem(80);
+                    color: map-get($color, yellow-7);
+                    position: absolute;
+
+                }
             }
 
             cite {
@@ -42,6 +57,32 @@
                 font-family: $poppins-regular;
                 font-weight: 700;
                 color: map-get($color, yellow-6);
+            }
+        }
+    }
+
+    /*RESPONSIVO - 767px*/
+    @media screen and (max-width: $tablet-portrait-down) {
+        .wrap {
+            grid-template-columns: 1fr;
+            text-align: center;
+    
+            .photo-depositions {
+                img {
+                    height: rem(200);
+                }
+            }
+    
+            .content-depositions{
+                padding: rem(40) rem(30);
+                justify-self: center;
+                margin: 0 auto;
+    
+                .paragraph-depositions {
+                    padding: 0 rem(24);
+                    font-size: rem(24);
+                    margin-bottom: rem(24);
+                }
             }
         }
     }
