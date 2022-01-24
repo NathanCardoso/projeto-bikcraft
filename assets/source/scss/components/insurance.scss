@@ -21,7 +21,7 @@
                 gap: rem(40);
                 align-items: center;
 
-                .silver, .gold {
+                .card {
                     background: black;
                     display: grid;
                     grid-template-columns: 1fr 1fr;
@@ -87,6 +87,7 @@
 
                     .button, .button-secondary {
                         width: max-content;
+                        cursor: pointer;
                     }
                 }
 
