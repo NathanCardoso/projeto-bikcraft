@@ -35,8 +35,8 @@
         line-height: 1.33;
         font-weight: bold;      
     }
-}
 
-.button:hover {
-    background: linear-gradient(map-get($color, yellow-3), map-get($color, yellow-4));
+}
+.button-secondary:hover {
+    background: map-get($color, gray-3);
 }

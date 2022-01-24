@@ -74,12 +74,11 @@
                                 display: inline-block;
                                 width: rem(13);
                                 height: rem(9);
-                                background: url("../../../../static/images/icones/lista.svg");
+                                background: url('#{$image-path}icones/lista.svg');
                                 position: absolute;
                                 left: rem(-20);
                             }
                         }
-
 
                         li + li {
                             margin-top: rem(20);
