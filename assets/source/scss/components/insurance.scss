@@ -74,9 +74,9 @@
                                 display: inline-block;
                                 width: rem(13);
                                 height: rem(9);
-                                background-image: url("../../images/icones/lista.svg");
+                                background: url("../../../../static/images/icones/lista.svg");
                                 position: absolute;
-                                left: -20px;
+                                left: rem(-20);
                             }
                         }
 
@@ -88,6 +88,12 @@
 
                     .button, .button-secondary {
                         width: max-content;
+                    }
+                }
+
+                .gold {
+                    .title-plan {
+                        color: map-get($color, yellow);
                     }
                 }
 
