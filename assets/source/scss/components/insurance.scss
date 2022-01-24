@@ -96,55 +96,6 @@
                         color: map-get($color, yellow);
                     }
                 }
-
-                // .gold {
-                //     background: black;
-                //     display: grid;
-                //     grid-template-columns: 1fr 1fr;
-                //     padding: rem(32) rem(32) rem(32) rem(60);
-                //     border-radius: rem(4);
-
-                //     .title-plan {
-                //         color: map-get($color, gray-2);
-                //         font-size: rem(32);
-                //         line-height: 1.25;
-                //         font-family: $poppins-semibold;
-                //         font-weight: 600;
-                //         text-transform: uppercase;
-                //         margin-bottom: rem(40);
-                //     }
-
-                //     .price-plan {
-                //         justify-self: end;    
-
-                //         .value {
-                //             font-size: rem(32);
-                //             line-height: 1.25;
-                //             font-family: $poppins-semibold;
-                //             font-weight: 600;
-                //             color: white;
-                //         }
-                //         .duration {
-                //             text-align: end;
-                //             color: map-get($color, gray-2);
-                //         }
-                //     }
-
-                //     .rof {
-                //         grid-column: 1 / -1;
-                //         justify-self: start;
-                //         font-size: rem(18);
-                //         line-height: 1.35;
-                //         font-family: $roboto-regular;
-                //         font-weight: 500;
-                //         color: white;
-                //         margin-bottom: rem(32);
-
-                //         li + li {
-                //             margin-top: rem(20);
-                //         }
-                //     }
-                // }
             }
         }
     }
