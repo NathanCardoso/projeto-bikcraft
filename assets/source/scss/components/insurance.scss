@@ -99,4 +99,59 @@
             }
         }
     }
+
+    /*RESPONSIVO | <= 1023*/
+    @media screen and(max-width: $tablet-landscape-down) {
+        .container {
+            .wrap {
+                .title-insurance {
+                    font-size: rem(48);
+                }
+            }
+        }
+    }
+
+    /*RESPONSIVO | <= 767px*/
+    @media screen and (max-width: $tablet-portrait-down) {
+        .container {
+            .wrap {
+                .title-insurance {
+                    font-size: rem(32);
+                }
+
+                .plan-insurance {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+
+    /*RESPONSIVO | <= 479px*/ 
+    @media screen and (max-width: $mobile-only) {
+        .container {
+            .wrap {
+                .plan-insurance {
+                    .card {
+                        grid-template-columns: 1fr;
+                        padding: rem(32) rem(32) rem(32) rem(44);
+                        justify-self: center;
+
+                        .title-plan {
+                            justify-self: center;
+                            margin-bottom: rem(32);
+                        }
+
+                        .price-plan {
+                            justify-self: center;
+                            margin-bottom: rem(32);
+                        }
+
+                        .rof {
+                            justify-self: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
