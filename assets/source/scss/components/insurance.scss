@@ -47,6 +47,7 @@
                             font-family: $poppins-semibold;
                             font-weight: 600;
                             color: white;
+                            text-align: end;
                         }
                         .duration {
                             text-align: end;
@@ -76,7 +77,7 @@
                                 height: rem(9);
                                 background: url('#{$image-path}icones/lista.svg');
                                 position: absolute;
-                                left: rem(-20);
+                                left: rem(-21);
                             }
                         }
 
