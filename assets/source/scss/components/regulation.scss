@@ -1,0 +1,30 @@
+.regulation {
+  padding: rem(80) 0;
+
+  .title {
+    > h2 {
+      font-size: rem(24);
+      line-height: 1.5;
+      font-family: $poppins-regular;
+      font-weight: 600;
+      color: map-get($color, black-1);
+      margin-bottom: rem(20);
+    }
+  }
+
+  .paragraph + .title{
+    margin-top: rem(40);
+  }
+
+  .paragraph {
+    > p {
+      font-size: rem(16);
+      line-height: 1.5;
+      font-family: $poppins-regular;
+      font-weight: 400;
+      color: map-get($color, black-2);
+      max-width: 75ch;
+      margin-bottom: rem(20);
+    }
+  }
+}

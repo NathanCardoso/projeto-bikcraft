@@ -1,0 +1,41 @@
+.title {
+  > h1 {
+    font-size: rem(64);
+    line-height: 1.125;
+    font-family: $poppins-semibold;
+    font-weight: 600;
+  }
+  
+  > h2 {
+    font-size: rem(64);
+    line-height: 1.125;
+    font-family: $poppins-semibold;
+    font-weight: 600;
+  }
+}
+
+/*RESPONSIVO | <= 1023px*/
+@media screen and (max-width: $tablet-landscape-down) {
+  .title {
+    > h1 {
+      font-size: rem(48);
+    }
+
+    > h2 {
+      font-size: rem(48);
+    }
+  }
+}
+
+/*RESPONSIVO | <= 767px*/
+@media screen and (max-width: $tablet-portrait-down) {
+  .title {
+    > h1 {
+      font-size: rem(32);
+    }
+
+    > h2 {
+      font-size: rem(32);
+    }
+  }
+}

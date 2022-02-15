@@ -6,10 +6,6 @@
         
         .wrap {
             .title-bike {
-                font-size: rem(64);
-                line-height: 1.125;
-                font-family: $poppins-semibold;
-                font-weight: 600;
                 box-sizing: border-box;
                 max-width: rem(1200);
                 margin: 0 auto rem(40);
@@ -73,17 +69,6 @@
             }
         }
     }
-
-    /*RESPONSIVO | <= 1023px*/
-    @media screen and (max-width: $tablet-landscape-down) {
-        .container {
-            .wrap {
-                .title-bike {
-                    font-size: rem(48);
-                }
-            }
-        }
-    }
     
     /*RESPONSIVO | <= 768px*/
     @media screen and (max-width: $tablet-portrait-down) {
@@ -91,10 +76,6 @@
         
         .container {
             .wrap {
-                .title-bike {
-                    font-size: rem(32);
-                }
-    
                 .card-bike {
                     gap: rem(20);
                     padding: 0;
