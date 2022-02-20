@@ -1,20 +1,14 @@
-.title {
-  > p {
-    font-size: rem(24);
+.paragraph {
+  .pgph-1 {
+    font-size: rem(16);
+    line-height: 1.5;
+    font-family: $poppins-regular;
+    font-weight: 400;
+  }
+  .pgph-2 {
+    font-size: rem(16);
     line-height: 1.5;
     font-family: $roboto-regular;
-    font-weight: 500;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: map-get($color, gray);
-    padding-bottom: rem(4);
-  }
-
-  @media screen and (max-width: $tablet-portrait-down) {
-    > p {
-      font-size: rem(16);
-      text-transform: lowercase;
-      font-weight: 400;
-    }
+    font-weight: 400;
   }
 }

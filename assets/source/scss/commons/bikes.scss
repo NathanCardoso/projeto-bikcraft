@@ -1,0 +1,140 @@
+.bikes {
+  .wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: rem(60) 0;
+    gap: rem(40);
+
+    .bike-image {
+      display: grid;
+      
+      img {
+        grid-area: 1/1;
+      }
+
+      span {
+        display: inline-block;
+        place-self: start end;
+        grid-area: 1/1;
+        background: black;
+        color: white;
+        margin-top: rem(20);
+        padding: rem(8) rem(16) rem(8) rem(8);
+        border-radius: rem(4) 0 0 rem(4);
+      }
+    }
+
+    .bike-content {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-content: start;
+
+      .title, .paragraph-content {
+        grid-column: 1 / -1;
+      } 
+
+      .title {
+        margin-bottom: rem(20);
+      }
+
+      .paragraph-content {
+        margin-bottom: rem(32);
+        .paragraph {
+          color: map-get($color, gray-1);      
+        }
+      }
+
+      .title::before {
+        content: '';
+        display: block;
+        width: rem(12);
+        height: rem(8);
+        background: map-get($color, yellow);
+        margin-bottom: rem(8);
+      }
+
+      .button {
+        place-self: end;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: rem(18);
+          height: rem(10);
+          margin-left: rem(12);
+          background: url("#{$image-path}icones/seta.svg");
+          transition: transform .2s;
+        }
+
+        &:hover::after {
+          transform: translateX(4px);
+        }
+      }
+
+      .icon-description {
+        display: grid;
+        gap: rem(16);
+        color: map-get($color, gray-1);
+
+        li {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: rem(24);
+            margin-right: rem(8);
+          }
+        }
+      }
+    }
+  }
+  
+  .wrapper:nth-child(even) {
+    background: linear-gradient(to right, white 30%, map-get($color, black-1) 0%);
+
+    .title {
+      color: white;
+    }
+
+    .paragraph-content {
+      .paragraph {
+        color: map-get($color, gray);
+      }
+    }
+
+    .icon-description {
+      color: map-get($color, gray);
+    }
+  }
+
+  @media screen and (max-width:$tablet-portrait-down) {
+    .wrapper:nth-child(even) {
+      background: map-get($color, black-1);
+    }
+
+    .wrap {
+      grid-template-columns: 1fr;
+      gap: rem(20);
+      padding: rem(40) 0;
+    }
+  }
+
+  @media screen and (max-width: $mobile-only) {
+    .wrap {
+      .bike-content {
+        grid-template-columns: 1fr;
+
+        .icon-description {
+          margin-bottom: rem(32);
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .button {
+          place-self: start;
+        }
+      }
+    }
+  }
+}

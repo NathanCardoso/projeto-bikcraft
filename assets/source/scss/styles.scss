@@ -17,6 +17,8 @@
 // Commons
 @import './commons/container';
 @import './commons/background-image';
+@import './commons/regulation.scss';
+@import './commons/bikes.scss';
 
 // Components
 @import './components/header';
@@ -30,9 +32,10 @@
 @import './components/depositions.scss';
 @import './components/insurance.scss';
 @import './components/title.scss';
+@import './components/title-paragraph.scss';
+@import './components/paragraph.scss';
 @import './components/paragraph.scss';
 @import './components/bg.scss';
-@import './components/regulation.scss';
 
 // Vendor 
 

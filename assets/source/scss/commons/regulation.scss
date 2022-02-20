@@ -17,14 +17,8 @@
   }
 
   .paragraph {
-    > p {
-      font-size: rem(16);
-      line-height: 1.5;
-      font-family: $poppins-regular;
-      font-weight: 400;
-      color: map-get($color, black-2);
-      max-width: 75ch;
-      margin-bottom: rem(20);
-    }
+    color: map-get($color, black-2);
+    max-width: 75ch;
+    margin-bottom: rem(20);
   }
 }
