@@ -1,0 +1,39 @@
+.benefits {
+  background: black;
+
+  .wrap {
+    padding: rem(120) 0;
+
+    .title {
+      color: white;
+
+      .subt-1 {
+        margin-bottom: rem(60);
+      }
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(rem(280), max-content));
+      gap: rem(40) rem(80);
+
+      .benefits-image, .title {
+        margin-bottom: rem(8);
+      }
+
+      .paragraph {
+        color: map-get($color, gray);
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet-portrait-down) {
+    .wrap {
+      padding: rem(60) 0;
+
+      .benefits-list {
+        gap: rem(20);
+      }
+    }
+  }
+}

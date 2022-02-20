@@ -13,11 +13,25 @@
     font-weight: 600;
   }
 
+  .subt-1 {
+    font-size: rem(64);
+    line-height: 1.125;
+    font-family: $poppins-semibold;
+    font-weight: 600;
+  }
+
   .subt-2 {
     font-size: rem(32);
     line-height: 1.25;
     font-family: $poppins-semibold;
     font-weight: 600;
+  }
+
+  .subt-3 {
+    font-size: rem(24);
+    line-height: 1.5;
+    font-family: $poppins-regular;
+    font-weight: 400;
   }
 }
 
@@ -31,6 +45,10 @@
     > h2 {
       font-size: rem(48);
     }
+
+    .subt-1 {
+      font-size: rem(48);
+    }
   }
 }
 
@@ -42,6 +60,10 @@
     }
 
     > h2 {
+      font-size: rem(32);
+    }
+
+    .subt-1 {
       font-size: rem(32);
     }
   }

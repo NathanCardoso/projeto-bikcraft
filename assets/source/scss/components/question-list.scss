@@ -1,0 +1,68 @@
+.questions {
+  padding: rem(120) 0;
+
+  .wrap {
+    .title {
+      margin-bottom: rem(60);
+    }
+
+    .questions-list {
+      .paragraph {
+        padding: rem(20);
+        border-radius: rem(4);
+
+        &:nth-child(odd) {
+          background: map-get($color, white-2);
+        }
+
+        dt {
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          align-items: center;
+          gap: rem(8);
+          cursor: pointer;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: rem(12);
+            height: rem(8);
+            background: map-get($color, yellow);
+          }
+          
+          &::after {
+            content: '';
+            display: inline-block;
+            width: rem(14);
+            height: rem(6);
+            background: url("#{$image-path}icones/seta-abrir.svg");
+            transition: .3s;
+          }
+
+          &:hover::after {
+            transform: rotate(180deg);
+
+          }
+        }
+
+        dd {
+          padding: rem(16) rem(0) rem(0) rem(20);
+          max-width: 80ch;
+        }
+      }
+    }
+  }
+
+  /*RESPONSIVO | <= 767px*/
+  @media screen and (max-width: $tablet-portrait-down) {
+    .questions {
+      padding: rem(60) 0;
+
+      .wrap {
+        .title {
+          margin-bottom: rem(40);
+        }
+      }
+    }
+  }
+}
