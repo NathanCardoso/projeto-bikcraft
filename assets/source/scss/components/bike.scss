@@ -6,10 +6,17 @@
       }
     }
   }
+
+  .bike-list {
+    .title-bike {
+      margin: 0 0 rem(40);
+    }
+  }
 }
 
 .bike {
   background: map-get($color, black-1);
+  padding-bottom: rem(60);
 
   .wrap {
     display: grid;
