@@ -2,13 +2,10 @@
   padding: rem(80) 0;
 
   .title {
-    > h2 {
-      font-size: rem(24);
-      line-height: 1.5;
-      font-family: $poppins-regular;
+    .subt-3 {
       font-weight: 600;
-      color: map-get($color, black-1);
       margin-bottom: rem(20);
+      color: map-get($color, black-1);
     }
   }
 

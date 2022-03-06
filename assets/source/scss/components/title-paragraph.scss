@@ -1,5 +1,12 @@
 .title {
-  > p {
+  .pgph-1 {
+    font-size: rem(32);
+    line-height: 1.25;
+    font-family: $roboto-regular;
+    font-weight: 500;
+  }
+
+  .pgph-2 {
     font-size: rem(24);
     line-height: 1.5;
     font-family: $roboto-regular;
@@ -10,15 +17,8 @@
     padding-bottom: rem(4);
   }
 
-  .pgph-1 {
-    font-size: rem(32);
-    line-height: 1.25;
-    font-family: $roboto-regular;
-    font-weight: 500;
-  }
-
   @media screen and (max-width: $tablet-portrait-down) {
-    > p {
+    .pgph-2 {
       font-size: rem(16);
       text-transform: lowercase;
       font-weight: 400;
