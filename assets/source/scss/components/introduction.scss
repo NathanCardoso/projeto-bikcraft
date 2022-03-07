@@ -1,96 +1,92 @@
 .introduction {
-    background: map-get($color, black);
-    box-shadow: inset 0 rem(-120) #fff;
+  background: map-get($color, black);
+  box-shadow: inset 0 rem(-120) #fff;
+
+  .container {
+    .wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: rem(40);
+
+      .content-introduction {
+        align-self: end;
+        padding-bottom: rem(200);
+
+        .title-introduction {
+          margin-bottom: rem(32);
+          color: map-get($color, white);
+        }
+
+        .paragraph-introduction {
+          margin-bottom: rem(20);
+          color: map-get($color, gray);
+        }
+
+        .button-introduction {
+          font-family: $poppins-semibold;
+
+          .button {
+            font-weight: 600;
+          }
+        }
+      }
+
+      .photo-introduction {
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  /*RESPONSIVO | <= 1023px*/
+  @media screen and (max-width: $tablet-landscape-down) {
+    .container {
+      .wrap {
+        .content-introduction {
+          .paragraph-introduction {
+            font-size: rem(18);
+          }
+        }
+      }
+    }
+  }
+
+  /*RESPONSIVO | <= 767px*/
+  @media screen and (max-width: $tablet-portrait-down) {
+    background: map-get($color, black-1);
+    padding-top: rem(40);
+    box-shadow: inset 0 rem(-60) map-get($color, white);
 
     .container {
-        .wrap {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: rem(40);
-            
-            .content-introduction {
-                align-self: end;
-                padding-bottom: rem(200);
-    
-                .title-introduction {
-                    margin-bottom: rem(32);
-                    color: map-get($color, white);
-                }
-    
-                .paragraph-introduction {
-                    margin-bottom: rem(20);
-                    font-family: $roboto-regular;
-                    font-size: rem(24);
-                    line-height: 1.5;
-                    color: map-get($color, gray);
-                 }
-    
-                 .button-introduction {
-                     font-family: $poppins-semibold;
-                        
-                    .button {
-                        font-weight: 600;  
-                    }
-                }
-            }
-    
-            .photo-introduction {
-                img {
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-    }
+      .wrap {
+        grid-template-columns: 1fr;
+        gap: rem(32);
 
-    /*RESPONSIVO | <= 1023px*/
-    @media screen and (max-width: $tablet-landscape-down) {
-        .container {
-            .wrap {
-                .content-introduction {
-                    .paragraph-introduction {
-                        font-size: rem(18);
-                    }
-                }
-            }
-        }
-    }
+        .content-introduction {
+          padding-bottom: rem(0);
 
-    /*RESPONSIVO | <= 767px*/
-    @media screen and (max-width: $tablet-portrait-down) {
-        background: map-get($color, black-1);
-        padding-top: rem(40);
-        box-shadow: inset 0 rem(-60) map-get($color, white);
-    
-        .container {
-            .wrap {
-                grid-template-columns: 1fr;
-                gap: rem(32);
-    
-                .content-introduction {
-                    padding-bottom: rem(0);
-    
-                    .title {
-                        margin-bottom: rem(16);
-                    }
-    
-                    button {
-                        padding: rem(12) rem(16);
-    
-                        a {
-                            font-size: rem(16);
-                        }
-                    }
-                }
-    
-                .photo-introduction {
-                    img {
-                        height: rem(300);
-                        width: 100%;
-                    }
-                }
+          .title {
+            margin-bottom: rem(16);
+          }
+
+          button {
+            padding: rem(12) rem(16);
+
+            a {
+              font-size: rem(16);
             }
+          }
         }
+
+        .photo-introduction {
+          img {
+            height: rem(300);
+            width: 100%;
+          }
+        }
+      }
     }
+  }
 }
-

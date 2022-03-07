@@ -1,26 +1,27 @@
 .paragraph {
   .pgph-1 {
-    font-size: rem(16);
-    line-height: 1.5;
-    font-family: $poppins-regular;
-    font-weight: 400;
-  }
-  .pgph-2 {
-    font-size: rem(16);
+    font-size: rem(24);
     line-height: 1.5;
     font-family: $roboto-regular;
     font-weight: 400;
   }
 
-  .pgph-3 {
+  .pgph-2 {
     font-size: rem(18);
     line-height: 1.35;
     font-family: $poppins-regular;
     font-weight: 600;
   }
 
+  .pgph-3 {
+    font-size: rem(16);
+    line-height: 1.5;
+    font-family: $poppins-regular;
+    font-weight: 400;
+  }
+
   .pgph-4 {
-    font-size: rem(24);
+    font-size: rem(16);
     line-height: 1.5;
     font-family: $roboto-regular;
     font-weight: 400;
@@ -31,5 +32,18 @@
     line-height: 1.43;
     font-family: $roboto-regular;
     font-weight: 400;
+  }
+
+  .pgph-6 {
+    font-size: rem(12);
+    line-height: 1.35;
+    font-family: $poppins-regular;
+    font-weight: 400;
+  }
+
+  @media screen and (max-width: $tablet-landscape-up) {
+    .pgph-1 {
+      font-size: rem(18);
+    }
   }
 }

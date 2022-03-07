@@ -1,136 +1,134 @@
 .technology {
-    background: map-get($color , black-1);
-    box-shadow: inset 0 rem(80) white, inset 0 rem(-80) white;
+  background: map-get($color, black-1);
+  box-shadow: inset 0 rem(80) white, inset 0 rem(-80) white;
 
-    .container{
-        .wrap {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: rem(40);
+  .container {
+    .wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: rem(40);
 
-            .content-technology {
-                padding: rem(160) 0;
+      .content-technology {
+        padding: rem(160) 0;
 
-                .advanced-technology {
-                    font-size: rem(24);
-                    line-height: 1.5;
-                    font-family: $roboto-regular;
-                    font-weight: 500;
-                    letter-spacing: 0.015em;
-                    text-transform: uppercase;
-                    color: map-get($color, gray);
-                    margin-bottom: rem(20);
-                }
-
-                .title-technology {
-                    color: white;
-                    margin-bottom: rem(32);
-                }
-
-                .paragraph-technology {
-                    font-size: rem(24);
-                    line-height: 1.5;
-                    font-family: $roboto-regular;
-                    font-weight: 400;
-                    color: map-get($color, gray);
-                    margin-bottom: rem(20);
-                }
-
-                .button {
-                    margin-bottom: rem(80);
-                }
-
-                .specifications-technology {
-                    display: flex;
-                    gap: rem(40);
-
-                    .title-specifications-technology {
-                        font-size: rem(18);
-                        line-height: 1.35;
-                        font-family: $poppins-regular;
-                        font-weight: 400;
-                        color: white;
-                        margin-bottom: rem(8);
-                        width: max-content;
-                    }
-
-                    .paragraph-specifications-technology {
-                        font-size: rem(16);
-                        line-height: 1.5;
-                        font-family: $poppins-regular;
-                        font-weight: 400;
-                        color: map-get($color, gray);
-                    }
-
-                    .icon-specifications-technology {
-                        img {
-                            width: rem(24);
-                            margin-bottom: rem(8);
-                        }
-                    }
-                }
-            }
-
-            .photo-technology {
-                img {
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                }
-            }
+        .advanced-technology {
+          font-size: rem(24);
+          line-height: 1.5;
+          font-family: $roboto-regular;
+          font-weight: 500;
+          letter-spacing: 0.015em;
+          text-transform: uppercase;
+          color: map-get($color, gray);
+          margin-bottom: rem(20);
         }
-    }
 
-    /*RESPONSIVO | <= 1023px*/
-    @media screen and (max-width: $tablet-landscape-down) {
-        .container {
-            .wrap {
-                .content-technology {
-                    .advanced-technology {
-                        font-size: rem(18);
-                    }
-                }
-            }
+        .title-technology {
+          color: white;
+          margin-bottom: rem(32);
         }
-    }
 
-    /*RESPONSIVO | <= 768px*/
-    @media screen and (max-width: $tablet-portrait-down) {
-        box-shadow: initial;
-    
-        .container {
-            .wrap {
-                grid-template-columns: 1fr;
-    
-                .content-technology {
-                    padding: rem(60) 0;
-    
-                    .paragraph-technology {
-                        font-size: rem(18);
-                    }
-    
-                    .button {
-                        margin-bottom: rem(60);
-                    }
-                }
-    
-                .photo-technology {
-                    display: none;
-                }
-            }
+        .paragraph-technology {
+          color: map-get($color, gray);
+          margin-bottom: rem(20);
         }
-    }
-    
-    /*RESPONSIVO | <= 479px*/
-    @media screen and (max-width: $mobile-only) {
-        .container {
-            .wrap {
-                .content-technology {
-                    .specifications-technology {
-                        flex-direction: column;
-                    }
-                }
-            }
+
+        .button {
+          margin-bottom: rem(80);
         }
+
+        .specifications-technology {
+          display: flex;
+          gap: rem(40);
+
+          .title-specifications-technology {
+            font-size: rem(18);
+            line-height: 1.35;
+            font-family: $poppins-regular;
+            font-weight: 400;
+            color: white;
+            margin-bottom: rem(8);
+            width: max-content;
+          }
+
+          .paragraph-specifications-technology {
+            color: map-get($color, gray);
+
+            .paragraph {
+              .pgph-2 {
+                font-weight: 400;
+              }
+            }
+          }
+
+          .icon-specifications-technology {
+            img {
+              width: rem(24);
+              margin-bottom: rem(8);
+            }
+          }
+        }
+      }
+
+      .photo-technology {
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
     }
+  }
+
+  /*RESPONSIVO | <= 1023px*/
+  @media screen and (max-width: $tablet-landscape-down) {
+    .container {
+      .wrap {
+        .content-technology {
+          .advanced-technology {
+            font-size: rem(18);
+          }
+        }
+      }
+    }
+  }
+
+  /*RESPONSIVO | <= 768px*/
+  @media screen and (max-width: $tablet-portrait-down) {
+    box-shadow: initial;
+
+    .container {
+      .wrap {
+        grid-template-columns: 1fr;
+
+        .content-technology {
+          padding: rem(60) 0;
+
+          .paragraph-technology {
+            font-size: rem(18);
+          }
+
+          .button {
+            margin-bottom: rem(60);
+          }
+        }
+
+        .photo-technology {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /*RESPONSIVO | <= 479px*/
+  @media screen and (max-width: $mobile-only) {
+    .container {
+      .wrap {
+        .content-technology {
+          .specifications-technology {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
 }

@@ -7,7 +7,7 @@
 
     .bike-image {
       display: grid;
-      
+
       img {
         grid-area: 1/1;
       }
@@ -29,9 +29,10 @@
       grid-template-columns: 1fr auto;
       align-content: start;
 
-      .title, .paragraph-content {
+      .title,
+      .paragraph-content {
         grid-column: 1 / -1;
-      } 
+      }
 
       .title {
         margin-bottom: rem(20);
@@ -40,12 +41,12 @@
       .paragraph-content {
         margin-bottom: rem(32);
         .paragraph {
-          color: map-get($color, gray-1);      
+          color: map-get($color, gray-1);
         }
       }
 
       .title::before {
-        content: '';
+        content: "";
         display: block;
         width: rem(12);
         height: rem(8);
@@ -59,13 +60,13 @@
         align-items: center;
 
         &::after {
-          content: '';
+          content: "";
           display: inline-block;
           width: rem(18);
           height: rem(10);
           margin-left: rem(12);
           background: url("#{$image-path}icones/seta.svg");
-          transition: transform .2s;
+          transition: transform 0.2s;
         }
 
         &:hover::after {
@@ -82,6 +83,14 @@
           display: flex;
           align-items: center;
 
+          .paragraph {
+            display: inline-block;
+
+            .pgph-2 {
+              font-weight: 400;
+            }
+          }
+
           img {
             width: rem(24);
             margin-right: rem(8);
@@ -90,7 +99,7 @@
       }
     }
   }
-  
+
   .wrapper:nth-child(even) {
     background: linear-gradient(to right, white 30%, map-get($color, black-1) 0%);
 
@@ -109,7 +118,7 @@
     }
   }
 
-  @media screen and (max-width:$tablet-portrait-down) {
+  @media screen and (max-width: $tablet-portrait-down) {
     .wrapper:nth-child(even) {
       background: map-get($color, black-1);
     }
